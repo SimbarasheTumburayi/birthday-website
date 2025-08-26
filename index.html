@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Happy Birthday Rumbidzai</title>
+    <!-- Essential viewport tag for mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(120deg, #f8ffae 0%, #43c6ac 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            perspective: 1200px;
+            line-height: 1.6;
+        }
+        
+        .main-3d {
+            margin: 20px auto;
+            width: 95%;
+            max-width: 900px;
+            background: rgba(255,255,255,0.85);
+            border-radius: 30px;
+            box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+            padding: 20px;
+            transform-style: preserve-3d;
+            animation: float3d 6s infinite alternate ease-in-out;
+        }
+        
+        @keyframes float3d {
+            0% { transform: rotateY(-8deg) rotateX(2deg) scale(1);}
+            50% { transform: rotateY(8deg) rotateX(-2deg) scale(1.03);}
+            100% { transform: rotateY(-8deg) rotateX(2deg) scale(1);}
+        }
+        
+        h1, h2 {
+            position: relative;
+            z-index: 1;
+            background: rgba(255,255,255,0.18);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.28);
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            color: #ff69b4;
+            text-shadow: 0 2px 12px rgba(255, 255, 255, 0.4), 0 1px 24px #43c6ac;
+            font-family: 'Pacifico', cursive;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            transition: box-shadow 0.3s, transform 0.3s;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 1.4rem;
+            color: #0077cc;
+            margin-top: 25px;
+            background: rgba(255,255,255,0.22);
+            border-radius: 14px;
+            box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.13);
+            padding: 12px 20px;
+            font-family: 'Segoe UI', cursive;
+            text-shadow: 0 1px 8px rgba(255, 255, 255, 0.4), 0 1px 12px #43c6ac;
+        }
+        
+        h1:hover, h2:hover {
+            box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.28);
+            transform: scale(1.04) rotateY(4deg);
+        }
+        
+        p {
+            margin-bottom: 15px;
+            padding: 0 10px;
+            font-size: 1rem;
+            color: #333;
+            text-align: justify;
+        }
+        
+        section {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            background: rgba(255,255,255,0.12);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(67,198,172,0.08);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            margin: 15px 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .photo-album {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .photo-album img, .photo-album video {
+            width: 100%;
+            max-width: 280px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+            transition: transform 0.4s, box-shadow 0.4s;
+            background: #fff;
+        }
+        
+        .photo-album img:hover, .photo-album video:hover {
+            transform: scale(1.08) rotateY(8deg);
+            box-shadow: 0 12px 32px rgba(255,105,180,0.18);
+        }
+        
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .main-3d {
+                padding: 15px;
+                margin: 10px auto;
+                width: 100%;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+                padding: 12px 15px;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+                padding: 10px 15px;
+            }
+            
+            p {
+                font-size: 0.9rem;
+                padding: 0 5px;
+            }
+            
+            .photo-album img, .photo-album video {
+                max-width: 100%;
+                height: 180px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.3rem;
+            }
+            
+            h2 {
+                font-size: 1.1rem;
+            }
+            
+            .photo-album {
+                gap: 10px;
+            }
+            
+            .photo-album img, .photo-album video {
+                height: 150px;
+            }
+        }
+        
+        /* Add some special effects for the birthday message */
+        .birthday-message {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 105, 180, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 105, 180, 0.2);
+        }
+        
+        .heart {
+            color: #ff69b4;
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-3d">
+        <h1>Happy 24th Birthday Rumbidzai Thandani Manyama</h1>
+        
+        <div class="birthday-message">
+            <p>Psalms 118:24 - <em>"This is the day the LORD has made; let us rejoice and be glad in it"</em></p>
+        </div>
+        
+        <p>This is my confession to you: I fell in love with you the first day I saw you. I liked your smile, but as a guy you know, being sentimental makes one weak, so I played it cool to get the girl you know. From the day we met till today, you keep getting more beautiful and prettier every time I lay my eyes on you. I just want you to know I appreciate you and adore you.</p>
+        
+        <section>
+            <h2>Your Song</h2>
+            <p>You said I should not pay attention to the lyrics coz you don't mean them</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Nn7oTrDmGro?si=EwuFB0TCkKUIBbXg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <section>
+            <h2>My Song to You</h2>
+            <p>If I was the owner of this song, dedicated to you straight up, with all this being said <span class="heart">❤️</span> I LOVE YOU RUMBIDZAI <span class="heart">❤️</span></p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/WqSPNpSSgGg?si=oCDMCmV5UIoomCv5" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <section>
+            <h2>This One is My Vibe Song Right Now</h2>
+            <p>BY DAVIDO</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ktSc4BV8loo?si=L6rmiQ9nYJ6MPA0H" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <section>
+            <h2>WE WILL HAVE ALL WE NEED AND WANT I PRAY</h2>
+            <p>I ALSO LOVE THIS SONG, TELL ME WHAT YOU THINK ABOUT IT</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/So97pmyDbVw?si=M022YFCkDK8AexXb" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Photo Album</h2>
+            <div class="photo-album">
+                <!-- Placeholder images with a birthday theme -->
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyODAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMjgwIDIwMCI+PHJlY3Qgd2lkdGg9IjI4MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmZmYiLz48dGV4dCB4PSI0MCIgeT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNmZjY5YjQiPkhhcHB5IEJpcnRoZGF5ITwvdGV4dD48L3N2Zz4=" alt="Birthday image">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyODAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMjgwIDIwMCI+PHJlY3Qgd2lkdGg9IjI4MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmMGY4ZmYiLz48dGV4dCB4PSI0MCIgeT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMwMDc3Y2MiPkJpcnRoZGF5IE1lbW9yaWVzPC90ZXh0Pjwvc3ZnPg==" alt="Birthday memories">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyODAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMjgwIDIwMCI+PHJlY3Qgd2lkdGg9IjI4MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmZmY2ZWMiLz48dGV4dCB4PSI0MCIgeT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNmZjY5YjQiPjI0IFllYXJzIE9sZCE8L3RleHQ+PC9zdmc+" alt="24 years old">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyODAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgMjgwIDIwMCI+PHJlY3Qgd2lkdGg9IjI4MCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNlOGZmZWUiLz48dGV4dCB4PSI0MCIgeT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMwMDc3Y2MiPkNlbGVicmF0aW5nIFlvdSE8L3RleHQ+PC9zdmc+" alt="Celebrating you">
+                <!-- Add more placeholder images as needed -->
+            </div>
+            <p style="text-align: center; margin-top: 15px; font-style: italic;">(Your photos will appear here when uploaded)</p>
+        </section>
+    </div>
+
+    <script>
+        // Simple JavaScript to enhance the user experience
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add a birthday confetti effect on tap/click
+            const mainElement = document.querySelector('.main-3d');
+            let tapCount = 0;
+            
+            mainElement.addEventListener('click', function() {
+                tapCount++;
+                if (tapCount % 3 === 0) {
+                    // Create a simple confetti effect
+                    for (let i = 0; i < 30; i++) {
+                        createConfetti();
+                    }
+                }
+            });
+            
+            function createConfetti() {
+                const confetti = document.createElement('div');
+                confetti.innerHTML = '🎉';
+                confetti.style.position = 'fixed';
+                confetti.style.fontSize = '24px';
+                confetti.style.zIndex = '1000';
+                confetti.style.pointerEvents = 'none';
+                confetti.style.left = Math.random() * window.innerWidth + 'px';
+                confetti.style.top = '-30px';
+                confetti.style.animation = `fall ${1 + Math.random() * 2}s linear forwards`;
+                
+                document.body.appendChild(confetti);
+                
+                // Remove confetti after animation completes
+                setTimeout(() => {
+                    confetti.remove();
+                }, 3000);
+            }
+            
+            // Add keyframes for confetti animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fall {
+                    to {
+                        transform: translateY(${window.innerHeight + 30}px) rotate(${360 * Math.random()}deg);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
